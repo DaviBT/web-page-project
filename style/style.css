@@ -242,15 +242,14 @@
   }
   
   footer > span {
-    transition-duration: 0.3s;
-    animation: ease-in-out;
     display: inline-block;
   }
   
   footer > a:hover span {
-    padding-left: 0.8em;
     transition-duration: 0.3s;
     animation: ease-in-out;
+    transition: all .9 linear;
+    padding-left: 0.8em;
   }
   
   /* animations */

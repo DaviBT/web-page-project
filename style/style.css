@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen+Mono&family=PT+Mono&family=Poppins:wght@500&family=Ubuntu:wght@700&display=swap');
+
+/* variables */
+:root {
+    --text-color: white;
+    --bg-url: url(../assets/bg/Mobile-1080x1920.jpg);
+    /* colors (from the lighter to the darker) */
+    --color1: #023e7d;
+    --color2: #002855;
+    --color3: #001845;
+    --color4: #001233;
+    --color5: #33415c;
+    --lightGray: #52525b;
+    --darkGray: #1e1e1e;
+    /* margin */
+    --margin1: 2rem 7rem 0rem 7rem;
+    /* bg color */
+    --bgColor: rgba(225, 225, 225, 0.1);
+    --bgColorHover: rgba(225, 225, 225, 0.05);
+    /*switch*/
+    --switchImg: url(../assets/switch/night-mode.svg);
+  }
+  
+  * {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.5 linear;
+    color: var(--text-color);
+  }
+  
+  html {
+    font-size: 50%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+  }
+  html::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: var(--darkGray);
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: var(--color3);
+  }
+  
+  .light {
+    --text-color: black;
+    --bg-url: url(../assets/bg/MobileLight-1080x1920.jpg);
+    --bgColor: rgba(83, 83, 83, 0.1);
+    --bgColorHover: rgba(83, 83, 83, 0.05);
+    --switchImg: url(../assets/switch/light-mode.svg);
+  }
+  
+  body {
+    background: var(--bg-url) no-repeat top center / cover;
+    /* background: color image repeat position /size;*/
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    animation: ease-in-out;
+    transition: background 1s;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  main {
+    width: 45rem;
+    margin: 4em auto 0 auto;
+    padding: 0 1.5em;
+  }
+  
+  /*profile*/
+  #profile {
+    text-align: center;
+    padding: 3em;
+  }
+  
+  #profile > img {
+    width: 10em;
+  }
+  
+  #profile > p {
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 1.8rem;
+    margin-top: 0.5em;
+  }
+  
+  /*switch button*/
+  #switch {
+    position: relative;
+    width: 64px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  #switch > button {
+    width: 3rem;
+    height: 3rem;
+    background: white var(--switchImg) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    animation: slide-back 1s;
+  }
+  
+  .light #switch button {
+    animation: slide-in 1s forwards;
+  }
+  
+  #switch > span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    /* surface-color-dark-mode */
+    background: var(--bgColor);
+    /* stroke-color-dark-mode */
+    border: 1px solid var(--bgColorHover);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  
+  /* list */
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+    margin-top: 4em;
+  }
+  
+  ul > li {
+    background-color: none;
+  }
+  
+  .accordion {
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.5 linear;
+  }
+  
+  .active{
+    text-align: left;
+    transition: all 0.5 linear;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background: var(--bgColor);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size:1.3rem;
+  }
+  
+  ul > li > button {
+    border: 1px solid var(--lightGray);
+    border-radius: 8px;
+    background-color: var(--bgColor);
+    padding: 1em 2em;
+    width: 80vw;
+    -webkit-backdrop-filter: blur(4px);
+    animation: ease-in-out;
+    transition: background 0.5s;
+  }
+  
+  ul > li > button:hover {
+    background-color: var(--bgColorHover);
+    border: 1.5px solid var(--text-color);
+    cursor: pointer;
+  }
+  
+  /*social links*/
+  #social-links {
+    display: flex;
+    gap: 1em;
+    padding: 1.3em;
+    font-size: 3em;
+    justify-content: center;
+  }
+  #social-links > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    border-radius: 50%;
+    animation: ease-in-out;
+    transition: background 0.2s;
+  }
+  
+  #social-links > a:hover {
+    background: var(--bgColor);
+    padding: 0.5em;
+    border-radius: 50%;
+  }
+  
+  /* footer */
+  footer {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-bottom: 3em;
+  }
+  
+  footer > a {
+    transition-duration: 0.3s;
+    animation: ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  footer > a:visited {
+    color: var(--text-color);
+  }
+  
+  footer > span {
+    transition-duration: 0.3s;
+    animation: ease-in-out;
+    display: inline-block;
+  }
+  
+  footer > a:hover span {
+    padding-left: 0.8em;
+    transition-duration: 0.3s;
+    animation: ease-in-out;
+  }
+  
+  /* animations */
+  @keyframes slide-in {
+    from{
+      left:0;
+    }
+    to{
+      left:60%;
+    }
+  }
+  
+  @keyframes slide-back {
+    from{
+      left:60%;
+    }
+    to{
+      left:0;
+    }
+  }
+

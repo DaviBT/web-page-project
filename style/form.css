@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen+Mono&family=PT+Mono&family=Poppins:wght@500&family=Ubuntu:wght@700&display=swap');
+
+/* variables */
+:root {
+    --text-color: white;
+    --bg-url: url(../assets/bg/Mobile-1080x1920.jpg);
+    /* colors (from the lighter to the darker) */
+    --color1: #023e7d;
+    --color2: #002855;
+    --color3: #001845;
+    --color4: #001233;
+    --color5: #33415c;
+    --lightGray: #52525b;
+    --darkGray: #1e1e1e;
+    /* margin */
+    --margin1: 2rem 7rem 0rem 7rem;
+    /* bg color */
+    --bgColor: rgba(225, 225, 225, 0.1);
+    --bgColorHover: rgba(225, 225, 225, 0.05);
+    /*switch*/
+    --switchImg: url(../assets/switch/night-mode.svg);
+  }
+
+body {
+    background: var(--bg-url) no-repeat top center / cover;
+    /* background: color image repeat position /size;*/
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    animation: ease-in-out;
+    transition: background 1s;
+    box-sizing: border-box;
+    color:white;
+    /*font*/
+    font-family: 'Montserrat', sans-serif;
+  }
+
+nav{
+    margin-left: 4rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-decoration:none;
+    color:white;
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+
+nav > a > i{
+    padding-left: 4rem;
+    transition-duration:.3s;
+    animation: ease-in-out;
+    transition: all .5 linear;
+}
+
+nav > a:hover > i{
+    padding-left: 3.6rem;
+    padding-right: .4rem;
+}
+
+header{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.inputBox{
+    margin-top:2rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn2{
+    margin-top:1rem;
+    display:inline-block;
+    padding: .6rem 1rem;
+    font-size:1.1rem;
+    color:white;
+    border:white;
+    border-radius:5rem;
+    cursor:pointer;
+    background:none;
+    transition-duration: 0.2s;
+    animation:ease-in-out;
+    width:10rem;
+}
+
+.btn2:hover{
+    background:rgba(255, 255, 255, 0.766);
+    color:black;
+}

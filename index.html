@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+   <!-- the main will contain the main sections and topics of the portfolio -->
+   <main>
+    <!-- the profile div contains the profile information -->
+    <div id="profile">
+      <img src="assets/profile/profile.png" alt="profile image" />
+      <p>Davi Torres</p>
+    </div>
+
+    <!-- the switch div contains the button that changes the page's theme -->
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
+      <span></span>
+    </div>
+
+    <!-- the unordered list contains the information topics about me -->
+    <ul>
+      <li>
+        <!-- the button accordion has a accordion effect that will show the panel div -->
+        <button class="accordion">About me</button>
+        <div class="panel">
+          <p>I'm a systems devepment student, currently 17 years old and persuing my dreams.<br> I want to study Computer Science in college and work with Cloud services.</p>
+        </div>
+      </li>
+      <li>
+        <button class="accordion">Knowledges</button>
+        <div class="panel">
+          <p>I have knowledge in:</p>
+          <ul class="skills-list">
+            <li class="skill">Microsoft Azure Cloud (AZ900)</li>
+            <li class="skill">CSS3, SASS/SCSS, Bootstrap, HTML5 and JavaScript</li>
+            <li class="skill">React</li>
+            <li class="skill">Linux (Fedora, Ubuntu, and Mint) and Windows</li>
+            <li class="skill">Figma</li>
+            <li class="skill">Git and GitHub</li>
+            <li class="skill">Visual Studio</li>
+            <li class="skill">Node.js</li>
+            <li class="skill">Python</li>
+            <li class="skill">PHP</li>
+            <li class="skill">Apache</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <button class="accordion">Projects</button>
+        <div class="panel">
+          <h3><a href="https://github.com/DaviBT/Habit-Tracker">Habit Tracker</a></h3>
+          <p>An application created with HTML5, CSS3, SASS/SCSS and JavaScript that helps you control your habits.</p>
+
+          <h3><a href="https://github.com/DaviBT/Project-Travel_Agency">Travel Agency</a></h3>
+          <p>An ficticius website about a travel agency acreated with HTML5, CSS3, SASS/SCSS and JavaScript.</p>
+        </div>
+      </li>
+      <li>
+        <button class="accordion">Professional Qualification</button>
+        <div class="panel">
+            <h3>Systems Development</h3>
+            <p>SENAI Almirante Tamandaré</p>
+          <h3>HTML5, CSS3 and JavaScript</h3>
+          <p>
+            HTML5, CSS3, Git and GitHub [CeV] - 4 modules of 40h each<br>
+            JavaScript [JavaScript] - 40h<br>
+            JavaScript [RocketSeat] - 2h23<br>
+            devlinks project JavaScript, CSS3, HTML5, Git and GitHub [Rocketseat] - 5h<br>
+            </p>
+            <h3>Microsoft Azure</h3>
+            <p></p>
+          
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <!-- the social-links contains my personal social media profiles -->
+  <div id="social-links">
+    <a href="https://github.com/davibt" target="_blank">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+    <a href="https://www.linkedin.com/in/DaviBT" target="_blank">
+      <ion-icon name="logo-linkedin"></ion-icon>
+    </a>
+  </div>
+
+  <!-- the footer contains a button that allows the user to send a message in a form-->
+  <footer>
+    <a href="form.html">Let's work together <span>&gt;</span></a>
+  </footer>
+
+
+  <!-- script -->
+  <script src="script/script.js"></script>
+
+  <!-- ion icons -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</body>
+</html>
